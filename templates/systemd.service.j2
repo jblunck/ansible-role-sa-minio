@@ -6,7 +6,7 @@ After=network-online.target
 AssertFileIsExecutable={{ minio_home }}/minio
 
 [Service]
-WorkingDirectory="{{minio_home}}"
+WorkingDirectory={{minio_home}}
 
 User={{ minio_user }}
 Group={{ minio_user }}
