@@ -9,8 +9,6 @@
 
   - name: Minio | Create home directory
     file: path="{{minio_home}}" state="directory" owner="root" group="{{minio_user}}"
-    with_items:
-      - "{{minio_data_dirs}}"
     become: yes
     tags:
       - minio
