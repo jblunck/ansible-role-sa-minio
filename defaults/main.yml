@@ -6,6 +6,7 @@ role_dir: "{{role_path}}"
 minio_home: "/opt/minio"
 minio_data_dirs:
   - "{{minio_home}}/data"
+minio_volumes: "{{ [ minio_data_dirs | list ] }}"
 
 minio_server_addr: "{{ansible_default_ipv4.address}}"
 minio_server_port: 9091
